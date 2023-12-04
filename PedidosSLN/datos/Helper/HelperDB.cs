@@ -17,7 +17,7 @@ namespace CarpinteriaApp.datos
 
         public HelperDB()
         {
-            cnn = new SqlConnection(@"Data Source=DESKTOP-VC6AJLL\SQLEXPRESS;Initial Catalog=db_pedidos;Integrated Security=True");
+            cnn = new SqlConnection(@"Data Source=JUANSANTACROCE\SQLEXPRESS;Initial Catalog=db_pedidos;Integrated Security=True");
             
         }
 

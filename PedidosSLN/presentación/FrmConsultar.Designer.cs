@@ -40,13 +40,13 @@ namespace RecetasSLN.presentación
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFecEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEntregado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEntrega = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colBorrar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
@@ -74,7 +74,7 @@ namespace RecetasSLN.presentación
             this.dtpHasta.Location = new System.Drawing.Point(278, 53);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(83, 20);
-            this.dtpHasta.TabIndex = 7;
+            this.dtpHasta.TabIndex = 3;
             // 
             // label3
             // 
@@ -91,7 +91,7 @@ namespace RecetasSLN.presentación
             this.dtpDesde.Location = new System.Drawing.Point(106, 53);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(83, 20);
-            this.dtpDesde.TabIndex = 5;
+            this.dtpDesde.TabIndex = 2;
             // 
             // btnConsultar
             // 
@@ -128,7 +128,7 @@ namespace RecetasSLN.presentación
             this.cboClientes.Location = new System.Drawing.Point(106, 24);
             this.cboClientes.Name = "cboClientes";
             this.cboClientes.Size = new System.Drawing.Size(255, 21);
-            this.cboClientes.TabIndex = 0;
+            this.cboClientes.TabIndex = 1;
             // 
             // groupBox2
             // 
@@ -166,18 +166,8 @@ namespace RecetasSLN.presentación
             this.dgvPedidos.Name = "dgvPedidos";
             this.dgvPedidos.ReadOnly = true;
             this.dgvPedidos.Size = new System.Drawing.Size(594, 165);
-            this.dgvPedidos.TabIndex = 0;
+            this.dgvPedidos.TabIndex = 5;
             this.dgvPedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPedidos_CellContentClick);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(543, 350);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(91, 23);
-            this.btnSalir.TabIndex = 5;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // colCodigo
             // 
@@ -219,6 +209,16 @@ namespace RecetasSLN.presentación
             this.colBorrar.ReadOnly = true;
             this.colBorrar.Text = "Eliminar";
             this.colBorrar.UseColumnTextForButtonValue = true;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(543, 350);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(91, 23);
+            this.btnSalir.TabIndex = 6;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FrmConsultar
             // 

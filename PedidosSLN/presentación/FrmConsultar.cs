@@ -67,13 +67,41 @@ namespace RecetasSLN.presentación
 
         private void dgvPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvPedidos.CurrentCell.ColumnIndex == 3)
+            if (dgvPedidos.CurrentCell.ColumnIndex == 4)
             {
                 var lParametros = new List<Parametro>();
-                lParametros.Add(new Parametro("@codigo", dgvPedidos.CurrentRow.Cells[0]));
-                helper.ConsultaSQL("SP_REGISTRAR_ENTREGA", lParametros);
-
-
+                lParametros.Add(new Parametro("@codigo", dgvPedidos.CurrentRow.Cells[0].Value));
+                if (helper.EjecutarSQL("SP_REGISTRAR_ENTREGA", lParametros)>0)
+                {
+                    MessageBox.Show("Se registro la entrega correctamente","Atencion",MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("El pedido ya fue entregado", "Error", MessageBoxButtons.OK);
+                }
+            }
+            if (dgvPedidos.CurrentCell.ColumnIndex == 5)
+            {
+                var result = MessageBox.Show("Esta seguro que desea registrar la baja?", "Atencion", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    var lParametros = new List<Parametro>();
+                    lParametros.Add(new Parametro("@codigo", dgvPedidos.CurrentRow.Cells[0].Value));
+                    if (helper.EjecutarSQL("SP_REGISTRAR_BAJA", lParametros) > 0)
+                    {
+                        MessageBox.Show("Se registro la entrega correctamente", "Atencion", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ya se le dio de baja a este pedido", "Error", MessageBoxButtons.OK);
+                    }
+                }
+                else
+                {
+                    return;
+                }
+                
+                
             }
         }
     }
